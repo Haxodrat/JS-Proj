@@ -1,5 +1,57 @@
 
+const items = [
+    { name: 'Bike', price: 100},
+    { name: 'TV', price: 400},
+    { name: 'Album', price: 80},
+    { name: 'Phone', price: 250},
+    { name: 'Book', price: 20},
+    { name: 'Keyboard', price: 50}
+]
 
+const elements = [1, 2, 3, 4, 5];
+
+const includesTwo = elements.includes(2);
+
+const filteredItems = items.filter((item) => {
+    return item.price <= 100;
+});
+
+const itemNames = items.map((item) => {
+    return item.name;
+});
+
+const foundItem = items.find((item) => {
+    return item.name === 'Book';
+});
+
+const hasInexpensiveItems = items.some((item) => {
+    return item.price <= 0;
+});
+
+const hasAllInexpensiveItems = items.every((item) => {
+    return item.price <= 50;
+});
+
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal;
+}, 0);
+
+items.forEach((item) => {
+    console.log(item.price);
+});
+
+
+
+
+
+console.log(items);
+console.log(filteredItems);
+console.log(itemNames);
+console.log(foundItem);
+console.log(hasInexpensiveItems);
+console.log(hasAllInexpensiveItems);
+console.log(total);
+console.log(includesTwo);
 
 // const content = document.querySelectorAll('p');
 
